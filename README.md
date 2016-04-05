@@ -117,7 +117,7 @@ dt3 << Graph Builder(
 
 ![time scatterplot](timevtime.png "Table time versus extracted time")
 
-I added two diagonal reference lines. The orange one corresponds to EST and the diagonal clusters near it are other US time zones. The graph diagonal is where the time in the table is the same as GMT. Lots of those! Oddly, few of those occur before 1 PM (1300Z) hours. Maybe the reporter could sometimes only handle one subtraction. Either subtract the time zone offset or subtract the 12 hour PM offset. Times after 1 PM require both adjustments, but it's as if only the latter was made.
+I added two diagonal reference lines. The orange one corresponds to EST and the diagonal clusters near it are other US time zones. The graph diagonal is where the time in the table is the same as GMT. Lots of those! Few of those occur before 1 PM (1300Z) hours, which seems reasonable for GMT sighting times in the US but not for local times.
 
 ## Categorizing
 
@@ -158,7 +158,7 @@ dt3 << Graph Builder(
 ```
 ![time histogram](cattimeshist.png "Time of day by GMT category")
 
-Now we can see how the `Identical` categorty was skewing the local times into the evening. The `Offset` category has a more expected peak during daylight hours and matches well with the times where the GMT times were `Missing`. Both of the latter suffer from the 12:00 AM spike and 12:00 PM drop, due to coding issues. It's unclear why the `Identical` category has a mostly uniform distribution.
+Now we can see how the `Identical` categorty was skewing the local times into the evening. The `Offset` category has a more expected peak during daylight hours and matches well with the times where the GMT times were `Missing`. Both of the latter suffer from the 12:00 AM spike and 12:00 PM drop, due to coding issues. It's unclear why the `Identical` category has a mostly uniform distribution. It could be a combination of two offset normal distributions, one for the east coast and on for the west coast.
 
 ## Conclusion
 
