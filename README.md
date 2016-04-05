@@ -1,6 +1,6 @@
 # Drone Sighting Times
 
-I'm using [JMP](http://jmp.com/) to explore the drone data set, inspired by the [weekly data viz challenge](https://rud.is/b/2016/03/30/introducing-a-weekly-r-python-js-etc-vis-challenge) from [@hrbrmstr][http://twitter.com/hrbrmstr). JMP's strength is interactive statistics and data visualization, but it does have a scripting language (JSL) which I'll use here in the spirit of reproducibility.
+I'm using [JMP](http://jmp.com/) to explore the recent [FAA drone data set](http://www.faa.gov/uas/law_enforcement/uas_sighting_reports/), inspired by the [weekly data viz challenge](https://rud.is/b/2016/03/30/introducing-a-weekly-r-python-js-etc-vis-challenge) from [@hrbrmstr](http://twitter.com/hrbrmstr). JMP's strength is interactive statistics and data visualization, but it does have a scripting language (JSL) which I'll use here in the spirit of reproducibility.
 
 ## Preparation
 
