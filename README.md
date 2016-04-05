@@ -4,7 +4,7 @@ I'm using [JMP](http://jmp.com/) to explore the recent [FAA drone data set](http
 
 ## Preparation
 
-Reading Excel files is normally done with the Excel import UI but these files are simple enough for the default settings so the script is just a plain `Open` call. The column names are a bit messy, so I cleaned those up.
+Reading Excel files is normally done with the Excel import UI, but these files are simple enough for the default settings, so the script is just a plain `Open` call. The column names are a bit messy, so I cleaned those up.
 
 ```javascript
 dt1 = Open("UASEventsNov2014-Aug2015.xls");
@@ -33,7 +33,7 @@ dt3 = dt1 << Concatenate(dt2);
 
 ## Time of Day
 
-I started playing with the data and noticed some quality issues with the time field. I create a new column that extracts the time of day from the `DateTime` column and make a histogram for it. I call it `Time of Day Table` because I'll be computing a different time of day later.
+I started playing with the data and noticed some quality issues with the time field. I created a new column that extracts the time of day from the `DateTime` column and make a histogram for it. I called it `Time of Day Table` because I'll be computing a different time of day later.
 
 ```javascript
 dt3 << New Column("Time of Day Table", Format("h:m"), Formula(Time of Day(:DateTime)));
@@ -63,7 +63,7 @@ While the distribution looks nice otherwise, it does seem to be a more shifted t
 
 There is! The `Report` column contains free text describing the incident and often includes a report time in 24-hour GMT (note the Z suffix).
 
-!(editcell.png "Free text field example")
+![Free text field screenshot](editcell.png "Free text field example")
 
 *(Note for future exploration: sometimes there is altitude data there.)*
 
